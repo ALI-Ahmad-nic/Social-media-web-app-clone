@@ -1,0 +1,17 @@
+<div class="container-md customcontainer">
+    <div class="row justify-content-center">
+        <div class="form-group  col-md-6">
+            <form [formGroup]="signupForm">
+                <input type="file" (change)="fileChange($event)"  class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01">
+                <!-- <button  class="input-group-text upload"  (click)="upload()"  id="btnUpload">Upload</button> -->
+                <textarea class="form-control" id="description" formControlName="description" rows="4" cols="50"
+                    placeholder="wrtie about post">
+
+                </textarea>
+                <button (click)="upload()" class="btn btn-primary" type="submit">post here</button>
+            </form>
+            <p>{{postmessage}}</p>
+        </div>
+    </div>
+</div>

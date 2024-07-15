@@ -1,0 +1,19 @@
+<div  class="container-md customcontainer" >
+  <div class="row">
+    <div class="col">
+      <a *ngIf="!apiService.token" [routerLink] = "['/signup']" >SignUP</a>
+      <a *ngIf="!apiService.token" [routerLink] = " ['/login']" >Login</a>
+      <a *ngIf="apiService.token" (click)="apiService.logoutfun()" > <span style="color: aliceblue
+      ;">Logout</span> </a>
+      <a *ngIf="apiService.token"  [routerLink] = " ['/addpost']" >Add Post</a>
+      <a   [routerLink] = " ['/myposts']" >My posts</a>
+      <a   [routerLink] = " ['/allposts']" >All posts</a>
+     
+    </div>
+  </div>
+</div>  
+
+<!-- <p>{{toggledata}}</p> -->
+
+<!-- <app-postlists [myinputMsg]="myInputMessage "   (myOutput)="GetChildData($event)"></app-postlists> -->
+<router-outlet></router-outlet>

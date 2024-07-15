@@ -1,0 +1,24 @@
+<div class="container-md customcontainer">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <form [formGroup]="signupForm">
+          <div class="file-input-wrapper">
+            <label for="file-upload" class="file-label">Upload File</label>
+            <input id="file-upload" type="file" (change)="fileChange($event)" class="file-input">
+          </div>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description" rows="4" cols="50" placeholder="Write about post"></textarea>
+          </mat-form-field>
+  
+          <!-- <button mat-raised-button color="primary" (click)="upload()" type="submit">Post Here</button> -->
+        </form>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button (click)="onSubmit()">Update</button>
+      </div>
+    </div>
+  </div>
+  
